@@ -9,8 +9,8 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-def searches():
-    api.search(q='arquitetura', count=10, result_type='recent')
+def retweeting():
+    searches = api.search(q='arquitetura', count=10, result_type='recent')
 
     best_tweet = 0
     id = 0
@@ -23,4 +23,4 @@ def searches():
 
     api.retweet(id)
 
-searches()
+retweeting()
