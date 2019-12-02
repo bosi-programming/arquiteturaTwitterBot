@@ -9,7 +9,7 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-searches = api.search(q='arquitetura', lang='pt-br', count=25, result_type='recent')
+searches = api.search(q='arquitetura', lang='pt-br', count=10, result_type='recent')
 
 best_tweet = 0
 
