@@ -12,6 +12,7 @@ api = tweepy.API(auth)
 searches = api.search(q='arquitetura', count=10, result_type='recent')
 
 best_tweet = 0
+id = 0
 
 for i in range(len(searches)):
     if searches[i].retweet_count > searches[best_tweet].retweet_count:
